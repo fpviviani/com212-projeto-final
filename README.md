@@ -5,23 +5,24 @@
     # Conferir se Laravel está global
     # Se não estiver: https://stackoverflow.com/questions/25373188/laravel-installation-how-to-place-the-composer-vendor-bin-directory-in-your
 
-# Instalar as dependências com "composer install"
+# Primeiros passos:
+    # Instalar as dependências com "composer install"
 
-# Copiar o arquivo .env.example e chamar a cópia de .env
+    # Copiar o arquivo .env.example e chamar a cópia de .env
 
-# Configurar o arquivo .env com as credenciais do seu MySQL
-    DB_DATABASE=nome_do_seu_banco
-    DB_USERNAME=seu_user
-    DB_PASSWORD=sua_senha
+    # Configurar o arquivo .env com as credenciais do seu MySQL
+        DB_DATABASE=nome_do_seu_banco
+        DB_USERNAME=seu_user
+        DB_PASSWORD=sua_senha
 
-# Rodar os seguintes comandos em ordem:
-    > php artisan key:generate
-    > php artisan config:cache 
-    
-    > (Sempre que modificar o .env é necessário rodar o config:cache)
+    # Rodar os seguintes comandos em ordem:
+        > php artisan key:generate
+        > php artisan config:cache 
 
-# Dar permissão na pasta storage (evita problemas de permissão de acesso)
-    > chmod 777 -R storage/
+        > (Sempre que modificar o .env é necessário rodar o config:cache)
+
+    # Dar permissão na pasta storage (evita problemas de permissão de acesso)
+        > chmod 777 -R storage/
 
 # Para subir o projeto local
     > php artisan serve
