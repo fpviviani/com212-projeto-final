@@ -6,7 +6,8 @@
     # Se não estiver: https://stackoverflow.com/questions/25373188/laravel-installation-how-to-place-the-composer-vendor-bin-directory-in-your
 
 # Primeiros passos:
-    # Instalar as dependências com "composer install"
+    # Instalar as dependências:
+        > composer install
 
     # Copiar o arquivo .env.example e chamar a cópia de .env
 
@@ -24,5 +25,5 @@
     # Dar permissão na pasta storage (evita problemas de permissão de acesso)
         > chmod 777 -R storage/
 
-# Para subir o projeto local
+# Para subir o projeto local:
     > php artisan serve
