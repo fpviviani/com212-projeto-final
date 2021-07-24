@@ -1,0 +1,27 @@
+Instalar O composer
+
+#4222be (antigo1)
+#a62cc1 (antigo2)
+brew install composer
+
+
+instalar o laravel
+
+
+
+Start no mysql
+
+brew services start mysql
+
+
+CREATE DATABASE com212;
+
+
+
+Paleta de cores:
+
+
+#000000 (preto)
+#FA255E (vermelho)
+#C39EA0 (marrom claro)
+#F8E5E5 (marrom mais claro)
