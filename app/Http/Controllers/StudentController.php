@@ -74,7 +74,7 @@ class StudentController extends AppBaseController
         }
         $student = $this->studentRepository->create($input);
 
-        Flash::success('Student saved successfully.');
+        Flash::success('Aluno cadastrado com sucesso!');
 
         return redirect(route('students.index'));
     }
@@ -91,7 +91,7 @@ class StudentController extends AppBaseController
         $student = $this->studentRepository->find($id);
 
         if (empty($student)) {
-            Flash::error('Student not found');
+            Flash::error('Aluno não encontrado.');
 
             return redirect(route('students.index'));
         }
@@ -111,7 +111,7 @@ class StudentController extends AppBaseController
         $student = $this->studentRepository->find($id);
 
         if (empty($student)) {
-            Flash::error('Student not found');
+            Flash::error('Aluno não encontrado.');
 
             return redirect(route('students.index'));
         }
@@ -147,14 +147,14 @@ class StudentController extends AppBaseController
         $student = $this->studentRepository->find($id);
 
         if (empty($student)) {
-            Flash::error('Student not found');
+            Flash::error('Aluno não encontrado.');
 
             return redirect(route('students.index'));
         }
 
         $student = $this->studentRepository->update($request->all(), $id);
 
-        Flash::success('Student updated successfully.');
+        Flash::success('Aluno atualizado com sucesso!');
 
         return redirect(route('students.index'));
     }
@@ -171,14 +171,14 @@ class StudentController extends AppBaseController
         $student = $this->studentRepository->find($id);
 
         if (empty($student)) {
-            Flash::error('Student not found');
+            Flash::error('Aluno não encontrado.');
 
             return redirect(route('students.index'));
         }
 
         $this->studentRepository->delete($id);
 
-        Flash::success('Student deleted successfully.');
+        Flash::success('Aluno deletado com sucesso!');
 
         return redirect(route('students.index'));
     }

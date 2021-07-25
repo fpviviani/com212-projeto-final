@@ -65,7 +65,7 @@ class EmployeeController extends AppBaseController
 
         $employee = $this->employeeRepository->create($input);
 
-        Flash::success('Employee saved successfully.');
+        Flash::success('Funcionário cadastrado com sucesso!');
 
         return redirect(route('employees.index'));
     }
@@ -82,7 +82,7 @@ class EmployeeController extends AppBaseController
         $employee = $this->employeeRepository->find($id);
 
         if (empty($employee)) {
-            Flash::error('Employee not found');
+            Flash::error('Funcionário não encontrado.');
 
             return redirect(route('employees.index'));
         }
@@ -102,7 +102,7 @@ class EmployeeController extends AppBaseController
         $employee = $this->employeeRepository->find($id);
 
         if (empty($employee)) {
-            Flash::error('Employee not found');
+            Flash::error('Funcionário não encontrado.');
 
             return redirect(route('employees.index'));
         }
@@ -132,14 +132,14 @@ class EmployeeController extends AppBaseController
         $employee = $this->employeeRepository->find($id);
 
         if (empty($employee)) {
-            Flash::error('Employee not found');
+            Flash::error('Funcionário não encontrado.');
 
             return redirect(route('employees.index'));
         }
 
         $employee = $this->employeeRepository->update($request->all(), $id);
 
-        Flash::success('Employee updated successfully.');
+        Flash::success('Funcionário cadastrado com sucesso!');
 
         return redirect(route('employees.index'));
     }
@@ -156,14 +156,14 @@ class EmployeeController extends AppBaseController
         $employee = $this->employeeRepository->find($id);
 
         if (empty($employee)) {
-            Flash::error('Employee not found');
+            Flash::error('Funcionário não encontrado.');
 
             return redirect(route('employees.index'));
         }
 
         $this->employeeRepository->delete($id);
 
-        Flash::success('Employee deleted successfully.');
+        Flash::success('Funcionário deletado com sucesso!');
 
         return redirect(route('employees.index'));
     }

@@ -60,7 +60,7 @@ class TeacherController extends AppBaseController
 
         $teacher = $this->teacherRepository->create($input);
 
-        Flash::success('Teacher saved successfully.');
+        Flash::success('Professor cadastrado com sucesso!');
 
         return redirect(route('teachers.index'));
     }
@@ -77,7 +77,7 @@ class TeacherController extends AppBaseController
         $teacher = $this->teacherRepository->find($id);
 
         if (empty($teacher)) {
-            Flash::error('Teacher not found');
+            Flash::error('Professor não encontrado.');
 
             return redirect(route('teachers.index'));
         }
@@ -97,7 +97,7 @@ class TeacherController extends AppBaseController
         $teacher = $this->teacherRepository->find($id);
 
         if (empty($teacher)) {
-            Flash::error('Teacher not found');
+            Flash::error('Professor não encontrado.');
 
             return redirect(route('teachers.index'));
         }
@@ -122,14 +122,14 @@ class TeacherController extends AppBaseController
         $teacher = $this->teacherRepository->find($id);
 
         if (empty($teacher)) {
-            Flash::error('Teacher not found');
+            Flash::error('Professor não encontrado.');
 
             return redirect(route('teachers.index'));
         }
 
         $teacher = $this->teacherRepository->update($request->all(), $id);
 
-        Flash::success('Teacher updated successfully.');
+        Flash::success('Professor atualizado com sucesso!');
 
         return redirect(route('teachers.index'));
     }
@@ -146,14 +146,14 @@ class TeacherController extends AppBaseController
         $teacher = $this->teacherRepository->find($id);
 
         if (empty($teacher)) {
-            Flash::error('Teacher not found');
+            Flash::error('Professor não encontrado.');
 
             return redirect(route('teachers.index'));
         }
 
         $this->teacherRepository->delete($id);
 
-        Flash::success('Teacher deleted successfully.');
+        Flash::success('Professor deletado com sucesso!');
 
         return redirect(route('teachers.index'));
     }

@@ -55,7 +55,7 @@ class ClassroomController extends AppBaseController
 
         $classroom = $this->classroomRepository->create($input);
 
-        Flash::success('Classroom saved successfully.');
+        Flash::success('Sala de Aula cadastrada com sucesso!');
 
         return redirect(route('classrooms.index'));
     }
@@ -72,7 +72,7 @@ class ClassroomController extends AppBaseController
         $classroom = $this->classroomRepository->find($id);
 
         if (empty($classroom)) {
-            Flash::error('Classroom not found');
+            Flash::error('Sala de Aula não encontrada.');
 
             return redirect(route('classrooms.index'));
         }
@@ -92,7 +92,7 @@ class ClassroomController extends AppBaseController
         $classroom = $this->classroomRepository->find($id);
 
         if (empty($classroom)) {
-            Flash::error('Classroom not found');
+            Flash::error('Sala de Aula não encontrada.');
 
             return redirect(route('classrooms.index'));
         }
@@ -113,14 +113,14 @@ class ClassroomController extends AppBaseController
         $classroom = $this->classroomRepository->find($id);
 
         if (empty($classroom)) {
-            Flash::error('Classroom not found');
+            Flash::error('Sala de Aula não encontrada.');
 
             return redirect(route('classrooms.index'));
         }
 
         $classroom = $this->classroomRepository->update($request->all(), $id);
 
-        Flash::success('Classroom updated successfully.');
+        Flash::success('Sala de Aula atualizada com sucesso!');
 
         return redirect(route('classrooms.index'));
     }
@@ -137,14 +137,14 @@ class ClassroomController extends AppBaseController
         $classroom = $this->classroomRepository->find($id);
 
         if (empty($classroom)) {
-            Flash::error('Classroom not found');
+            Flash::error('Sala de Aula não encontrada.');
 
             return redirect(route('classrooms.index'));
         }
 
         $this->classroomRepository->delete($id);
 
-        Flash::success('Classroom deleted successfully.');
+        Flash::success('Sala de Aula deletada com sucesso!');
 
         return redirect(route('classrooms.index'));
     }

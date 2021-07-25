@@ -60,7 +60,7 @@ class EquipmentController extends AppBaseController
 
         $equipment = $this->equipmentRepository->create($input);
 
-        Flash::success('Equipment saved successfully.');
+        Flash::success('Equipamento cadastrado com sucesso!');
 
         return redirect(route('equipment.index'));
     }
@@ -77,7 +77,7 @@ class EquipmentController extends AppBaseController
         $equipment = $this->equipmentRepository->find($id);
 
         if (empty($equipment)) {
-            Flash::error('Equipment not found');
+            Flash::error('Equipamento não encontrado.');
 
             return redirect(route('equipment.index'));
         }
@@ -97,7 +97,7 @@ class EquipmentController extends AppBaseController
         $equipment = $this->equipmentRepository->find($id);
 
         if (empty($equipment)) {
-            Flash::error('Equipment not found');
+            Flash::error('Equipamento não encontrado.');
 
             return redirect(route('equipment.index'));
         }
@@ -123,14 +123,14 @@ class EquipmentController extends AppBaseController
         $equipment = $this->equipmentRepository->find($id);
 
         if (empty($equipment)) {
-            Flash::error('Equipment not found');
+            Flash::error('Equipamento não encontrado.');
 
             return redirect(route('equipment.index'));
         }
 
         $equipment = $this->equipmentRepository->update($request->all(), $id);
 
-        Flash::success('Equipment updated successfully.');
+        Flash::success('Equipamento atualizado com sucesso!');
 
         return redirect(route('equipment.index'));
     }
@@ -147,14 +147,14 @@ class EquipmentController extends AppBaseController
         $equipment = $this->equipmentRepository->find($id);
 
         if (empty($equipment)) {
-            Flash::error('Equipment not found');
+            Flash::error('Equipamento não encontrado.');
 
             return redirect(route('equipment.index'));
         }
 
         $this->equipmentRepository->delete($id);
 
-        Flash::success('Equipment deleted successfully.');
+        Flash::success('Equipamento deletado com sucesso!');
 
         return redirect(route('equipment.index'));
     }
