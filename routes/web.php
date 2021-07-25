@@ -37,4 +37,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('employees', App\Http\Controllers\EmployeeController::class);
 
     Route::resource('equipment', App\Http\Controllers\EquipmentController::class);
+
+    // Users
+    Route::group(['prefix' => 'users'], function () {
+        Route::get('/', ['as'=>'users.index', 'uses'=>'App\Http\Controllers\UserController@index']);
+        Route::get('/create', ['as'=>'users.create', 'uses'=>'App\Http\Controllers\UserController@create']);
+        Route::post('/', ['as'=>'users.store', 'uses'=>'App\Http\Controllers\UserController@store']);
+        Route::get('/{user_id}', ['as'=>'users.show', 'uses'=>'App\Http\Controllers\UserController@show']);
+        Route::get('/edit/{user_id}', ['as'=>'users.edit', 'uses'=>'App\Http\Controllers\UserController@edit']);
+        Route::match(['put', 'patch'], '/{user_id}', ['as'=>'users.update', 'uses'=>'App\Http\Controllers\UserController@update']);
+        Route::delete('/{user_id}', ['as'=>'users.destroy', 'uses'=>'App\Http\Controllers\UserController@destroy']);
+    });
 });
