@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ config('app.name') }}</title>
+    <title>Lukadovic</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -39,7 +39,7 @@
 <body class="hold-transition login-page paginaToda">
 <div class="login-box">
 <!--     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
+        <a href="{{ url('/home') }}"><b>Lukadovic</b></a>
     </div> -->
 
 
