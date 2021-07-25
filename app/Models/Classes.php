@@ -80,4 +80,12 @@ class Classes extends Model
     {
         return is_null($this->updated_at)? null : Carbon::parse($this->updated_at)->format('d/m/Y | H:i');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function students()
+    {
+        return $this->hasMany(\App\Models\Student::class, 'class_id');
+    }
 }
