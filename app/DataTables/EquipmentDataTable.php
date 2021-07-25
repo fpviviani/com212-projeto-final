@@ -6,6 +6,8 @@ use App\Models\Equipment;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 use App\Services\DataTablesDefaults;
+use DB;
+use Yajra\DataTables\Datatables;
 
 class EquipmentDataTable extends DataTable
 {
@@ -17,9 +19,25 @@ class EquipmentDataTable extends DataTable
      */
     public function dataTable($query)
     {
-        $dataTable = new EloquentDataTable($query);
+        $equipments = Equipment::where('id', '>', 0)->select(
+            'equipments.*',
+            DB::raw("DATE_FORMAT(equipments.buy_date,'%d/%m/%Y') as readable_buy_date"),
+            DB::raw("FORMAT(equipments.price, 2, 'de_DE') as readable_price"),
+        );
 
-        return $dataTable->addColumn('action', 'equipment.datatables_actions');
+        return DataTables::of($equipments)
+            ->filterColumn('readable_buy_date', function($query, $keyword){
+                $query->whereRaw("
+                    date_format(equipments.buy_date,'%d/%m/%Y')
+                like ?", ["%{$keyword}%"]);
+            })
+            ->filterColumn('readable_price', function($query, $keyword){
+                $query->whereRaw("
+                    FORMAT(equipments.price, 2, 'de_DE')
+                like ?", ["%{$keyword}%"]);
+            })
+            ->addColumn('action', 'equipment.datatables_actions')
+            ->rawColumns(['action']);
     }
 
     /**
@@ -56,8 +74,8 @@ class EquipmentDataTable extends DataTable
     {
         return [
             'name' => ['render' => '(data)? ((data.length>180)? data.substr(0,180)+"..." : data) : "-"', 'title' => 'Nome'],
-            'buy_date' => ['render' => '(data)? ((data.length>180)? data.substr(0,180)+"..." : data) : "-"', 'title' => 'Data da compra'],
-            'price' => ['render' => '(data)? ((data.length>180)? data.substr(0,180)+"..." : data) : "-"', 'title' => 'Preço'],
+            'readable_buy_date' => ['render' => '(data)? ((data.length>180)? data.substr(0,180)+"..." : data) : "-"', 'title' => 'Data da compra'],
+            'readable_price' => ['render' => '(data)? ((data.length>180)? data.substr(0,180)+"..." : data) : "-"', 'title' => 'Preço'],
             'condition' => ['render' => '(data)? ((data.length>180)? data.substr(0,180)+"..." : data) : "-"', 'title' => 'Condição'],
         ];
     }
