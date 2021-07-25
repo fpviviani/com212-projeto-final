@@ -32,6 +32,14 @@
           integrity="sha512-aEe/ZxePawj0+G2R+AaIxgrQuKT68I28qh+wgLrcAJOz3rxCP+TwrK5SPN+E5I+1IQjNtcfvb96HDagwrKRdBw=="
           crossorigin="anonymous"/>
 
+    <style>
+        #dataTableBuilder_wrapper{
+            margin:1rem;
+            margin-bottom:0;
+        }
+    </style>
+    @include("vendor.input-customizer.masks")
+	@stack("css")
     @yield('third_party_stylesheets')
 
     @stack('page_css')
@@ -136,6 +144,7 @@
         crossorigin="anonymous"></script>
         
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js" integrity="sha512-J+763o/bd3r9iW+gFEqTaeyi+uAphmzkE/zU8FxY6iAvD3nQKXa+ZAWkBI9QS9QkYEKddQoiy0I5GDxKf/ORBA==" crossorigin="anonymous"></script>
+<script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
 
 <script>
     $(function () {
@@ -148,7 +157,7 @@
 </script>
 
 @yield('third_party_scripts')
-
+@stack("js")
 @stack('page_scripts')
 </body>
 </html>

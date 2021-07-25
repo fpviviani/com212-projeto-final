@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be5be78e78132baacbf0a65d2bfdd738",
+    "content-hash": "06a5575792f58d74cda18a19d90be60b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,60 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.0.2"
             },
             "time": "2020-10-29T16:03:21+00:00"
+        },
+        {
+            "name": "brenofortunato/input-customizer",
+            "version": "dev-master_bootstrap4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BrenoFortunato/input-customizer.git",
+                "reference": "8f23958dce254dc16203e575a98a808b92a2828c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BrenoFortunato/input-customizer/zipball/8f23958dce254dc16203e575a98a808b92a2828c",
+                "reference": "8f23958dce254dc16203e575a98a808b92a2828c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BrenoFortunato\\InputCustomizer\\InputCustomizerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BrenoFortunato\\InputCustomizer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Breno Fortunato",
+                    "email": "brenofortunato@gmail.com"
+                }
+            ],
+            "description": "Contains a set of masks to customize text inputs.",
+            "keywords": [
+                "custom",
+                "input",
+                "laravel",
+                "mask"
+            ],
+            "support": {
+                "issues": "https://github.com/BrenoFortunato/input-customizer/issues",
+                "source": "https://github.com/BrenoFortunato/input-customizer/tree/master_bootstrap4"
+            },
+            "time": "2021-05-18T12:16:32+00:00"
         },
         {
             "name": "brick/math",
@@ -8870,6 +8924,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "brenofortunato/input-customizer": 20,
         "infyomlabs/laravel-generator": 20
     },
     "prefer-stable": true,

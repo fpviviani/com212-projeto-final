@@ -24,3 +24,16 @@ Auth::routes();
 Route::get('/home', [
     HomeController::class, 'index'
 ])->name('home');
+
+
+Route::resource('classrooms', App\Http\Controllers\ClassroomController::class);
+
+Route::resource('teachers', App\Http\Controllers\TeacherController::class);
+
+Route::resource('classes', App\Http\Controllers\ClassesController::class);
+
+Route::resource('students', App\Http\Controllers\StudentController::class);
+
+Route::resource('employees', App\Http\Controllers\EmployeeController::class);
+
+Route::resource('equipment', App\Http\Controllers\EquipmentController::class);
