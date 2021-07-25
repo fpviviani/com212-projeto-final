@@ -55,7 +55,7 @@ class ClassesController extends AppBaseController
 
         $classes = $this->classesRepository->create($input);
 
-        Flash::success('Classes saved successfully.');
+        Flash::success('Turma cadastrada com sucesso!');
 
         return redirect(route('classes.index'));
     }
@@ -72,7 +72,7 @@ class ClassesController extends AppBaseController
         $classes = $this->classesRepository->find($id);
 
         if (empty($classes)) {
-            Flash::error('Classes not found');
+            Flash::error('Turma não encontrada.');
 
             return redirect(route('classes.index'));
         }
@@ -92,7 +92,7 @@ class ClassesController extends AppBaseController
         $classes = $this->classesRepository->find($id);
 
         if (empty($classes)) {
-            Flash::error('Classes not found');
+            Flash::error('Turma não encontrada.');
 
             return redirect(route('classes.index'));
         }
@@ -113,14 +113,14 @@ class ClassesController extends AppBaseController
         $classes = $this->classesRepository->find($id);
 
         if (empty($classes)) {
-            Flash::error('Classes not found');
+            Flash::error('Turma não encontrada.');
 
             return redirect(route('classes.index'));
         }
 
         $classes = $this->classesRepository->update($request->all(), $id);
 
-        Flash::success('Classes updated successfully.');
+        Flash::success('Turma atualizada com sucesso!');
 
         return redirect(route('classes.index'));
     }
@@ -134,17 +134,22 @@ class ClassesController extends AppBaseController
      */
     public function destroy($id)
     {
-        $classes = $this->classesRepository->find($id);
+        $class = $this->classesRepository->find($id);
 
-        if (empty($classes)) {
-            Flash::error('Classes not found');
+        if (empty($class)) {
+            Flash::error('Turma não encontrada.');
+
+            return redirect(route('classes.index'));
+        }
+        if($class->students){
+            Flash::error('Não é possível remover uma turma que possui alunos matriculados. Retire os alunos da turma antes.');
 
             return redirect(route('classes.index'));
         }
 
         $this->classesRepository->delete($id);
 
-        Flash::success('Classes deleted successfully.');
+        Flash::success('Turma deletada com sucesso!');
 
         return redirect(route('classes.index'));
     }
