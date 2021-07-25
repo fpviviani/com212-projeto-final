@@ -15,7 +15,7 @@ class DummySeeder extends Seeder
     {
         $currentTimestamp = \DB::raw('CURRENT_TIMESTAMP');
         $class = [
-            'year' => '2021',
+            'year' => 'Primeiro ano',
             'designation' => 'A',
             'created_at' => $currentTimestamp,
             'updated_at' => $currentTimestamp,
@@ -33,7 +33,7 @@ class DummySeeder extends Seeder
 
         $equipment = [
             'name' => 'Projetor',
-            'description' => 'Projeto imagens de um computador através de um cabo VGA.',
+            'description' => 'Projeta imagens de um computador através de um cabo VGA.',
             'condition' => 'Em funcionamento',
             'buy_date' => '2021-07-20',
             'price' => 500.00,
