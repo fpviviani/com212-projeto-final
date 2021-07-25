@@ -23,6 +23,8 @@
           integrity="sha512-8vq2g5nHE062j3xor4XxPeZiPjmRDh6wlufQlfC6pdQ/9urJkU07NM0tEREeymP++NczacJ/Q59ul+/K2eYvcg=="
           crossorigin="anonymous"/>
 
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,19 +32,27 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- CSS Juninho -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page paginaToda">
 <div class="login-box">
-    <div class="login-logo">
+<!--     <div class="login-logo">
         <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
-    </div>
+    </div> -->
+
 
     <!-- /.login-logo -->
 
     <!-- /.login-box-body -->
-    <div class="card">
-        <div class="card-body login-card-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+    <div class="card cartao ">
+
+        <div class="card-body login-card-body minha text-center">
+            
+            <p class="login-box-msg">
+                <div class="wordart purple titulo"><span class="text">Lukadovik</span></div>
+            </p>
 
             <form method="post" action="{{ url('/login') }}">
                 @csrf
@@ -52,8 +62,8 @@
                            name="email"
                            value="{{ old('email') }}"
                            placeholder="Email"
-                           class="form-control @error('email') is-invalid @enderror">
-                    <div class="input-group-append">
+                           class="form-control @error('email') is-invalid @enderror textoCaixa">
+                    <div class="input-group-append icones">
                         <div class="input-group-text"><span class="fas fa-envelope"></span></div>
                     </div>
                     @error('email')
@@ -65,10 +75,10 @@
                     <input type="password"
                            name="password"
                            placeholder="Password"
-                           class="form-control @error('password') is-invalid @enderror">
-                    <div class="input-group-append">
+                           class="form-control @error('password') is-invalid @enderror textoCaixa">
+                    <div class="input-group-append icones">
                         <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
+                            <span class="fas fa-lock "></span>
                         </div>
                     </div>
                     @error('password')
@@ -78,25 +88,25 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
-                        <div class="icheck-primary">
+                    <div class="col-8 ">
+                        <div class="icheck-primary ">
                             <input type="checkbox" id="remember">
-                            <label for="remember">Remember Me</label>
+                            <label class="textoNormal" for="remember">Tenho Amnésia</label>
                         </div>
                     </div>
 
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                        <button type="submit" class="btn btn-primary btn-block botoes">Entrar</button>
                     </div>
 
                 </div>
             </form>
 
             <p class="mb-1">
-                <a href="{{ route('password.request') }}">I forgot my password</a>
+                <a class="textoNormal" href="{{ route('password.request') }}">Esqueci minha senha</a>
             </p>
             <p class="mb-0">
-                <a href="{{ route('register') }}" class="text-center">Register a new membership</a>
+                <a class="textoNormal" href="{{ route('register') }}" class="text-center">Me cadastrar</a>
             </p>
         </div>
         <!-- /.login-card-body -->
@@ -109,6 +119,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.0.5/js/adminlte.min.js"
         integrity="sha512-++c7zGcm18AhH83pOIETVReg0dr1Yn8XTRw+0bWSIWAVCAwz1s2PwnSj4z/OOyKlwSXc4RLg3nnjR22q0dhEyA=="
         crossorigin="anonymous"></script>
+
 
 </body>
 </html>
