@@ -38,6 +38,8 @@
             margin-bottom:0;
         }
     </style>
+
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     @include("vendor.input-customizer.masks")
 	@stack("css")
     @yield('third_party_stylesheets')
@@ -46,24 +48,24 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+<div class="wrapper" >
     <!-- Main Header -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
+        <ul class="navbar-nav" >
+            <li class="nav-item" >
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
         </ul>
 
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto" >
             <li class="nav-item dropdown user-menu">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >
                     <img src="{{ asset('images/admin.png') }}"
                          class="user-image img-circle elevation-2" alt="User Image">
                     <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right" >
                     <!-- User image -->
                     <li class="user-header bg-primary">
                         <img src="{{ asset('images/admin.png') }}"

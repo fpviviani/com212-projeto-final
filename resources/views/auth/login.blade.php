@@ -36,7 +36,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
-<body class="hold-transition login-page paginaToda">
+<body class="hold-transition login-page">
 <div class="login-box">
 <!--     <div class="login-logo">
         <a href="{{ url('/home') }}"><b>Lukadovic</b></a>
@@ -46,9 +46,9 @@
     <!-- /.login-logo -->
 
     <!-- /.login-box-body -->
-    <div class="card cartao ">
+    <div class="card">
 
-        <div class="card-body login-card-body minha text-center">
+        <div class="card-body login-card-body text-center">
             
             <p class="login-box-msg">
                 <div class="wordart purple titulo"><span class="text">Lukadovik</span></div>
@@ -91,12 +91,12 @@
                     <div class="col-8 ">
                         <div class="icheck-primary ">
                             <input type="checkbox" id="remember">
-                            <label class="textoNormal" for="remember">Tenho Amnésia</label>
+                            <label for="remember">Tenho Amnésia</label>
                         </div>
                     </div>
 
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block botoes">Entrar</button>
+                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                     </div>
 
                 </div>

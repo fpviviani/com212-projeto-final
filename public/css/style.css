@@ -16,13 +16,21 @@
   color: black;
 }
 
-
-.botoes{
-  border-radius: 0.4em;
-  border: 0.2em solid black;
-  background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5);
-  color: black;
+button, .btn, .btn-default{
+  border-radius: 0.4em !important;
+  border: 0.2em solid black !important;
+  background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
+  color: black !important;
 }
+
+/*Barra Lateral*/
+
+.nav, .sidebar{
+  background-color: #000 !important;
+}
+
+
+
 
 .textoCaixa{
 
@@ -34,32 +42,33 @@
   margin-bottom: 0.2em;
 }
 
-.paginaToda{
-  background-color: #F8E5E5;
+body, .content-wrapper{
+  background-color: #F8E5E5 !important;
 
 }
-body {
-  background-color: #000;
-}
 
-.cartao{
+.card{
   box-shadow: inset 0 0 1em #FA255E, 0 0 1em #FA255E;
   border-radius: 1.2em;
   border: 0.3em solid black;
-
+  background-color: #FA255E;
 }
-.minha{
+
+.card-body{
   background-color: #FA255E;
   border-radius: 0.9em;
 }
 
-.textoNormal{
+label, .textoNormal{
 
   color: #000;
 }
 
 
-.wordart {
+h1{
+  font-size: 3em !important;
+}
+.wordart, h1 {
   font-family: Arial, sans-serif;
   font-size: 4em;
   font-weight: bold;
@@ -78,7 +87,7 @@ body {
     -ms-transform: skew(0, -10deg) scale(1, 1.5);
 }
 
-.wordart.purple .text {
+.wordart.purple .text, h1 {
     letter-spacing: -0.01em;
     font-family: Impact;
     background: #C39EA0;
