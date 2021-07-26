@@ -16,20 +16,48 @@
   color: black;
 }
 
-button, .btn, .btn-default{
+
+input, button, .btn, .btn-default, .paginate_button, .page-link, .dt-button, .dropdown-item, .buttons-columnVisibility{
   border-radius: 0.4em !important;
   border: 0.2em solid black !important;
   background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
   color: black !important;
 }
 
-/*Barra Lateral*/
 
-.nav, .sidebar{
-  background-color: #000 !important;
+.active{
+  border-radius: 0.4em !important;
+  border: 0.2em solid black !important;
+  background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
+  color: black !important;
+  font-weight: bold !important;
 }
 
 
+.dropdown-menu{
+  background-color: transparent !important;
+}
+.page-link{
+  border-color: transparent !important;
+  border: none !important;
+}
+
+table{
+    border-radius: 0.4em !important;
+    border: 0.2em solid black !important;
+    background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
+
+}
+
+/*Barra Lateral*/
+
+.nav, .sidebar, .sidebar-mini, footer{
+  background-color: #000 !important;
+}
+
+.navbar{
+  background-color: #C39EA0 !important;
+}
 
 
 .textoCaixa{
@@ -60,7 +88,7 @@ body, .content-wrapper{
 }
 
 label, .textoNormal{
-
+    font-weight: bold !important;
   color: #000;
 }
 
