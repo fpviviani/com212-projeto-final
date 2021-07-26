@@ -17,7 +17,7 @@
 }
 
 
-input, button, .btn, .btn-default, .paginate_button, .page-link, .dt-button, .dropdown-item, .buttons-columnVisibility{
+select, textarea, input, button, .btn, .btn-default, .paginate_button, .page-link, .dt-button, .dropdown-item, .buttons-columnVisibility{
   border-radius: 0.4em !important;
   border: 0.2em solid black !important;
   background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
@@ -57,6 +57,16 @@ table{
 
 .navbar{
   background-color: #C39EA0 !important;
+}
+
+.user-header, .bg-primary{
+  background-color: #FA255E !important;
+}
+
+
+.user-footer{
+  background-color: #C39EA0 !important;
+
 }
 
 
