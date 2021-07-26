@@ -37,7 +37,7 @@ class Classes extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'year' => 'integer',
+        'year' => 'string',
         'designation' => 'string'
     ];
 
