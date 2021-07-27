@@ -43,7 +43,7 @@
 <!-- Complement Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('complement', 'Complemento:') !!}
-    {!! Form::text('complement', null, ['class' => 'form-control', 'required']) !!}
+    {!! Form::text('complement', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Neighborhood Field -->
