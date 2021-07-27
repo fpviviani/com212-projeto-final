@@ -55,4 +55,10 @@
     </a>
 </li>
 
-
+<li class="nav-item">
+    <a href="{{ route('reports.general') }}"
+       class="nav-link {{ Request::is('reports*') ? 'active' : '' }}">
+        <i class="fas fa-clipboard-list"></i>
+        <p>Relatório Geral</p>
+    </a>
+</li>

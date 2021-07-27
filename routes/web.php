@@ -48,4 +48,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::match(['put', 'patch'], '/{user_id}', ['as'=>'users.update', 'uses'=>'App\Http\Controllers\UserController@update']);
         Route::delete('/{user_id}', ['as'=>'users.destroy', 'uses'=>'App\Http\Controllers\UserController@destroy']);
     });
+
+    // Reports
+    Route::group(['prefix' => 'reports'], function () {
+        Route::get('/general', ['as'=>'reports.general', 'uses'=>'App\Http\Controllers\ReportController@general']);
+    });
 });
