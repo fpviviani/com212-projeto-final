@@ -89,8 +89,14 @@ body, .content-wrapper{
   border-radius: 1.2em;
   border: 0.3em solid black;
   background-color: #FA255E;
+
 }
 
+
+.content{
+
+  padding-bottom: 4em;
+}
 .card-body{
   background-color: #FA255E;
   border-radius: 0.9em;
