@@ -21,7 +21,7 @@
         <div class="card">
 
             <div class="card-body">
-                <div class="row">
+                <div class="row verBusca">
                     @include('students.show_fields')
                 </div>
             </div>

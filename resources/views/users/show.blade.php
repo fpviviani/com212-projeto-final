@@ -18,7 +18,7 @@
     </section>
 
     <div class="content px-3">
-        <div class="card">
+        <div class="card verBusca">
 
             <div class="card-body">
                 <div class="row">

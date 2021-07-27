@@ -51,7 +51,6 @@ table{
 /*Barra Lateral*/
 
 
-
 .nav, .sidebar, .sidebar-mini, footer{
   background-color: #000 !important;
 }
@@ -108,11 +107,29 @@ label, .textoNormal{
   color: #000;
 }
 
+.verBusca, .verBusca label{
+  color: white !important;
+}
 
 h1{
   font-size: 3em !important;
 }
 
+
+.general-report-body, .novoCabecalho{
+  border-radius: 0 0 1.05em 1.05em !important;
+
+  box-shadow: none !important;
+  /*background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;*/
+  color: white;
+}
+
+.novoCabecalho{
+  border-radius: 1.05em 1.05em 0 0 !important;
+  box-shadow: none !important;
+  background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
+  color: white;
+}
 
 
 .wordart, h1 {
@@ -146,26 +163,12 @@ h1{
     background: -ms-linear-gradient(top, #C39EA0 0%, #F8E5E5 73%);
     background: linear-gradient(to bottom, #C39EA0 0%, #F8E5E5 73%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C39EA0', endColorstr='#F8E5E5', GradientType=0);
-    -webkit-text-stroke: 0.03em #000;
+    -webkit-text-stroke: 0.05em #000;
     filter: progid:DXImageTransform.Microsoft.Glow(Color=#b28ffd, Strength=1);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.general-report-body, .novoCabecalho{
-  border-radius: 0 0 1.15em 1.15em !important;
-
-  box-shadow: none !important;
-  /*background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;*/
-  color: white;
-}
-
-.novoCabecalho{
-  border-radius: 1.15em 1.15em 0 0 !important;
-  box-shadow: none !important;
-  background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
-  color: white;
-}
 
 
