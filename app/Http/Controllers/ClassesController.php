@@ -141,7 +141,7 @@ class ClassesController extends AppBaseController
 
             return redirect(route('classes.index'));
         }
-        if($class->students){
+        if(count($class->students)>0){
             Flash::error('Não é possível remover uma turma que possui alunos matriculados. Retire os alunos da turma antes.');
 
             return redirect(route('classes.index'));
