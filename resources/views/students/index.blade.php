@@ -8,7 +8,7 @@
                     <h1>Alunos</h1>
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-primary float-right"
+                    <a id="add-new-btn" class="btn btn-primary float-right"
                        href="{{ route('students.create') }}">
                         Adicionar Novo
                     </a>

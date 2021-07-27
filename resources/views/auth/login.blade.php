@@ -96,7 +96,7 @@
                     </div>
 
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                        <button id="login-btn" type="submit" class="btn btn-primary btn-block">Entrar</button>
                     </div>
 
                 </div>
