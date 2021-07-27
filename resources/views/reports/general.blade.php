@@ -15,10 +15,10 @@
 
         <div class="clearfix"></div>
         <div class="card general-report">
-            <div class="card-header">
+            <div class="card-header novoCabecalho">
                 <img src="{{ asset('images/ColegioNoBG.png') }}" style="max-height:8rem">
             </div>
-            <div class="card-body general-report-body">
+            <div class="card-body general-report-body ">
                 <div class="row">
                     <div class="col">
                         <h5>Este relatório apresenta uma situação geral do Colégio Prof. Sebastião Lukadovic na data de {{ \Carbon\Carbon::now()->format('d/m/Y') }}</h5>

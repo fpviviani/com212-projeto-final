@@ -17,7 +17,7 @@
 }
 
 
-select, textarea, input, button, .btn, .btn-default, .paginate_button, .page-link, .dt-button, .dropdown-item, .buttons-columnVisibility, .general-report{
+select, textarea, input, button, .btn, .btn-default, .paginate_button, .page-link, .dt-button, .dropdown-item, .buttons-columnVisibility{
   border-radius: 0.4em !important;
   border: 0.2em solid black !important;
   background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
@@ -49,6 +49,8 @@ table{
 }
 
 /*Barra Lateral*/
+
+
 
 .nav, .sidebar, .sidebar-mini, footer{
   background-color: #000 !important;
@@ -92,7 +94,6 @@ body, .content-wrapper{
 
 }
 
-
 .content{
 
   padding-bottom: 4em;
@@ -111,6 +112,9 @@ label, .textoNormal{
 h1{
   font-size: 3em !important;
 }
+
+
+
 .wordart, h1 {
   font-family: Arial, sans-serif;
   font-size: 4em;
@@ -149,8 +153,19 @@ h1{
     -webkit-text-fill-color: transparent;
 }
 
-.general-report-body{
-  border-radius: 0.4em !important;
-  box-shadow: inset 0 0 1em #FA255E, 0 0 1em #FA255E;
-  background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
+.general-report-body, .novoCabecalho{
+  border-radius: 0 0 1.15em 1.15em !important;
+
+  box-shadow: none !important;
+  /*background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;*/
+  color: white;
 }
+
+.novoCabecalho{
+  border-radius: 1.15em 1.15em 0 0 !important;
+  box-shadow: none !important;
+  background-image: linear-gradient(to bottom right, #C39EA0, #F8E5E5) !important;
+  color: white;
+}
+
+
